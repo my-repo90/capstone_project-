@@ -30,6 +30,7 @@ urlpatterns = [
     
     #####################
     path("home/",include("home.urls")),
+    path('register/',include('django.contrib.auth.urls')),
     # path("login/",include("login.urls")),
     # path("register/",include("register.urls")),
     

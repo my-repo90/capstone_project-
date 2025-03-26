@@ -40,7 +40,6 @@ INSTALLED_APPS = [
     'rest_framework',
     'login_account.apps.LoginAccountConfig',
     'logout_account.apps.LogoutAccountConfig',
-    'register.apps.RegisterConfig',
     'home.apps.HomeConfig',
 ]
 
