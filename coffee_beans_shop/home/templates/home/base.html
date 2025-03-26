@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BEANS shop</title>
+</head>
+
+<body style="background-color:rgb(173, 173, 173);">
+
+    {% block content %}
+    <nav>
+
+        <h1><a href="#">
+                <h1 style="box-shadow: 10px 10px 10px rgb(255, 255, 255); ">Coffee Beans Shop</h1>
+            </a></h1>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Login</a></li>
+            <li><a href="#">Create an account</a></li>
+            <li></li>
+        </ul>
+
+    </nav>
+    <style>
+        ul {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        li {
+            list-style-type: none;
+        }
+
+        nav {
+            background-color: rgb(100, 35, 35);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            border-radius: 10px 0px 10px;
+            box-shadow: 0px 10px 10 px rgba(0, 0, 0);
+        }
+
+        a {
+            color: aliceblue;
+            text-decoration: none;
+
+        }
+
+        a:link {
+            color: rgb(255, 255, 255);
+        }
+
+        a:hover {
+            color: rgb(26, 161, 161);
+        }
+
+        li:last-child {
+            position: absolute;
+            left: 2px;
+        }
+
+        footer,
+        footer ul {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background-color: rgba(158, 148, 148, 0.507);
+
+        }
+        footer ul{
+            align-items: flex-end;
+        }
+    </style>
+    <footer>
+        <ul>
+            <li>
+                <h3>OPENNING HOURS</h3>
+                <h4>(Monday-Friday) ... 8AM-20PM</h4>
+                <h4>Sunday ... 12PM-20PM</h4>
+            </li>
+            <li>
+                <h4>phone </h4>
+                <h4>email</h4>
+                <h4>social media</h4>
+            </li>
+            
+        </ul>
+    </footer>
+
+
+    {% endblock %}
+</body>
+
+</html>
