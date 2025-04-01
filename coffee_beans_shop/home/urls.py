@@ -1,5 +1,9 @@
-from django.urls import path , include
-from home.views import home
+from django.urls import path
+from home import views
+
 urlpatterns = [
-    path("",home),
+    path("",views.home),
+    # path('products/',views.Generics.as_view()),
+    # path('product/<int:pk>',views.Generics_pk.as_view()),
+    
 ]
