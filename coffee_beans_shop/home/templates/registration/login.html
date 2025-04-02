@@ -6,7 +6,7 @@ Login
 {% load crispy_forms_tags %}
 {% block content %}
 
-
+<div class="mb-3">
     {% csrf_token %}
 
     {{ form|crispy}}
@@ -14,3 +14,7 @@ Login
 
 
 {% endblock content %}
+
+
+</div>
+    

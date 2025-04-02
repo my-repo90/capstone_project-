@@ -22,20 +22,7 @@ from django.urls import path , include
 
 urlpatterns = [
     path('admin', admin.site.urls),
-    path('',include('home.urls')),
+    path('home',include('home.urls')),
     path('',include('django.contrib.auth.urls')),
-    # # path('accounts/',include('django.contrib.auth.urls')),
-    
-# #     path('user/<int:pk>', views.User_pk.as_view()),
-# #     path('users/',views.User.as_view()),
-# #     path('products/',views.Product.as_view()),
-# #     path('product/<int:pk>',views.Product_pk.as_view()),
-# #     path('orders/',views.Order.as_view()),
-# #     path('order/<int:pk>',views.Order_pk.as_view()),
-    
-#     #####################
-#     path("home/",include("home.urls")),
-#     # path("login/",include("login.urls")),
-#     # path("register/",include("register.urls")),
-    
+   
 ]
