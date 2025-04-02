@@ -14,21 +14,24 @@
 <body style="background-color:#a9846a; font-family: Open Sans";>
 
 
-    {% block content %}
+    {% block content_1 %}
     <nav>
 
         <h1><a href="#">
                 <h1 style="box-shadow: 10px 10px 10px rgb(255, 255, 255); ">Coffee Beans Shop</h1>
             </a></h1>
         <ul>
+            <li></li>
             <li><a href="#">Home</a></li>
             <li><a href="#">About Us</a></li>
-            <li><a href="registration/login.html">Login</a></li>
-            <li><a href="#">Create an account</a></li>
+            <li><a href="login/">Login</a></li>
+            <li><a href="">Create an account</a></li>
             <li></li>
         </ul>
 
     </nav>
+    {% endblock %}
+{% block content_2 %}
     <style>
         ul {
             display: flex;
@@ -79,6 +82,9 @@
             align-items: flex-end;
         }
     </style>
+    {% endblock content_2 %}
+
+    {% block content_3 %}
     <footer>
         <ul>
             <li>
@@ -94,9 +100,9 @@
             
         </ul>
     </footer>
+    {% endblock content_3 %}
 
-
-    {% endblock %}
+    
 </body>
 
 </html>

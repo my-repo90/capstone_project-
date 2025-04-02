@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-h@$4ip(ojpam8k5@a3qmu12mqd2xpv9=z1mxna85pmusp#r1$='
+SECRET_KEY = ''
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -39,6 +39,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'home.apps.HomeConfig',
+    'crispy_forms',
+    "crispy_bootstrap5",
+    
+    
     # 'account.apps.AccountConfig',
 ]
 
@@ -57,8 +61,7 @@ ROOT_URLCONF = 'capstone.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-    'DIRS': [os.path.join(BASE_DIR , 'home/templates'),
-                os.path.join(BASE_DIR , 'accounts/templates')],
+'DIRS': [os.path.join(BASE_DIR , 'home/templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -129,3 +132,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # LOGIN_REDIRECT_URL = '/home'
 # LOGOUT_REDIRECT_URL = '/login'
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+CRISPY_TEMPLATE_PACK = 'bootstrap5'
