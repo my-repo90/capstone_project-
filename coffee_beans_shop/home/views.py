@@ -11,7 +11,7 @@ from django.contrib.auth.decorators import login_required, permission_required
 from django.contrib.auth import login, logout, authenticate
 from django.contrib.auth.models import User, Group
 from .models import Product , Purchase
-
+from django.contrib.auth.forms import UserCreationForm , AuthenticationForm
 
 def home(request):
     products = Product.objects.all()
@@ -40,14 +40,22 @@ def home(request):
     return render(request, "home/home.html" , {"products" : products})
 
 
-def register(request):
-    if request.method == 'POST':
-        form = CreationForms(request.POST)
-        if form.is_valid():
-            user = form.save()
-            login(request, user)
-            return redirect('home/login.html')
-    else:
-        form = CreationForms()
+# def register(request):
+#     if request.method == 'POST':
+#         form = CreationForms(request.POST)
+#         if form.is_valid():
+#             user = form.save()
+#             login(request, user)
+#             return redirect('home/login.html')
+#     else:
+#         form = CreationForms()
 
-    return render(request, 'registration/login.html', {"form": form})
+#     return render(request, 'registration/login.html', {"form": form})
+
+ def register(request):
+#     form = UserCreationForm()
+#     return render(request , 'registration/register.html' ,{'form':form})
+
+def login(request):
+    form = AuthenticationForm()
+    return render(request , 'registration/login.html', {'form':form})
