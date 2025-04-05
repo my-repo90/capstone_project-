@@ -1,0 +1,8 @@
+
+<div class="positionning" style="position: absolute;top: 50%;">
+    {% block profile %}
+        {% if user.is_authenticated %}Hello, {{ user.username }}.{% endif %}
+    {% endblock profile %}
+
+</div>
+

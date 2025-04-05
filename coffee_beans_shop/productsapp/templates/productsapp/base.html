@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BEANS shop</title>
+</head>
+
+<body style="background-color:#a9846a; font-family: Open Sans";>
+
+
+  {% block content %}
+  
+    <nav>
+
+        <h1><a href="#">
+                <h1 style="box-shadow: 10px 10px 10px rgb(255, 255, 255); ">Coffee Beans Shop</h1>
+            </a></h1>
+        <ul>
+            <li></li>
+            <li><a href="about/">About Us</a></li>
+            <li><a href="login/">Login</a></li>
+            <li><a href="register/">Create an account</a></li>
+            
+            <li></li>
+        </ul>
+
+    </nav>
+
+    
+    
+    
+    <footer>
+        <ul>
+            <li>
+                <h4>OPENNING HOURS</h4>
+                <h5>(Monday-Friday) ... 8AM-20PM</h5>
+                <h5>Sunday ... 12PM-20PM</h5>
+            </li>
+            <li>
+                <h5>phone </h5>
+                <h5>email</h5>
+                <h5>social media</h5>
+            </li>
+            
+        </ul>
+    </footer>
+
+
+
+  {% endblock content %}
+    
+</body>
+
+
+<style>
+    ul {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    li {
+        list-style-type: none;
+    }
+
+    nav {
+        background-color: #A9806A;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        border-radius: 10px 0px 10px;
+        box-shadow: 0px 10px 10 px rgba(0, 0, 0);
+    }
+
+    a {
+        color: aliceblue;
+        text-decoration: none;
+
+    }
+
+    a:link {
+        color: rgb(255, 255, 255);
+    }
+
+    a:hover {
+        color: rgb(26, 161, 161);
+    }
+
+    li:last-child {
+        position: absolute;
+        left: 2px;
+    }
+
+    footer,
+    footer ul {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background-color: rgba(158, 148, 148, 0.507);
+
+    }
+    footer ul{
+        align-items: flex-end;
+    }
+</style>
+
+
+</html>

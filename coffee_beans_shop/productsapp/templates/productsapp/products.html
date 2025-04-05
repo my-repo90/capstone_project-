@@ -1,6 +1,5 @@
-{% extends 'home/base.html' %}
+{% extends 'productsapp/base.html' %}
 {% block products %}
-{% if user.is_authenticated %}Hello, {{ user.username }}.{% endif %}
 <ul>
     {% for x in products %}
       <li>{{ x.name }}</li>

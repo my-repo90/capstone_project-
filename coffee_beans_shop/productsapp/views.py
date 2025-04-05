@@ -83,3 +83,7 @@ def no_rest(request):
 
     
     return JsonResponse(products , safe=False)
+
+def home(request):
+    products = Product.objects.all()
+    return render(request , 'productsapp/products.html' , {'products':products})
