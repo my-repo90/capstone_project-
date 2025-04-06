@@ -1,7 +1,8 @@
 {% extends 'home/base.html' %}
 {% load static %}
 <link rel="stylesheet" href={% static "CSS/styles.css" %}>
-{% block content %}
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-DQvkBjpPgn7RC31MCQoOeC9TI2kdqa4+BSgNMNj8v77fdC77Kj5zpWFTJaaAoMbC" crossorigin="anonymous">
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,10 +11,10 @@
     <title>Document</title>
 </head>
 <body>
-
+{% block content %}
 <h1>
         
-{% if user.is_authenticated %}Hello, {{ user.username }}.{% endif %}
+{% if user.is_authenticated %}Choose the coffee you like ,  {{ user.username }}.{% endif %}
 
 </h1>
 
@@ -36,15 +37,27 @@
     </ul>
 
 </nav>
-{% for p in products %}
-<tr>
-    <a href="{% url 'product_details' product_id=product.id %}">
-        <td>{{ p.name }}</td>
-    </a>
-    
-    <hr>
-</tr>
+<div class="partition" style="position: absolute;top: 30%;width: 100%;">
+    {% for pro in products %}
+    <tr>
+
+        <td>{{ pro.name }}</td>
+        <td>*********price:</td>
+        <td>{{ pro.price }}</td>
+        <td>*********quantity in stock : </td>
+        <td>{{ pro.stock }}</t  d>
+        
+            <form  method="post">
+                {% csrf_token %}
+                <input type="submit" value="add to cart" class="btn btn-outline-light">
+            </form>
+        
+        
+        <hr>
+    </tr>
 {% endfor %}
+</div>
+
 
 
 
@@ -63,13 +76,13 @@
         
     </ul>
 </footer>
-
+{% endblock content %}
 
 
 
 
     
 
-{% endblock content %}
+
 </body>
 </html>

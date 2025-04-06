@@ -23,7 +23,7 @@ def register(request):
                 password = password
             )
             login(request, user)
-            return redirect('home')
+            return redirect('profile')
     else:
         form = UserCreationForm()
     args = {'form': form}
@@ -43,7 +43,9 @@ def login(request):
                 password = password
             )
             login(request, user)
-            return redirect('home/profile.html')
+        return redirect('profile')
+           
+        
     else:
         form = AuthenticationForm()
         args = {'form': form}
@@ -69,4 +71,4 @@ def profile(request):
 @login_required
 def logout(request):
     auth.logout(request)
-    return redirect('')
+    return render(request , 'home/lougout.html')
