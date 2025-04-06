@@ -86,4 +86,4 @@ def no_rest(request):
 
 def home(request):
     products = Product.objects.all()
-    return render(request , 'productsapp/products.html' , {'products':products})
+    return render(request , 'templates/productsapp/products.html' , {'products':products})

@@ -8,6 +8,7 @@ from django.contrib.auth.forms import UserCreationForm , AuthenticationForm
 from django.template import RequestContext
 from django.template import loader
 from django.http import HttpResponse
+from django.contrib import auth
 
 def register(request):
     if request.method =='POST':
@@ -67,3 +68,8 @@ def logout(request):
 @login_required
 def profile(request):
     return render(request,'home/profile.html')
+
+@login_required
+def logout(request):
+    auth.logout(request)
+    return redirect('')

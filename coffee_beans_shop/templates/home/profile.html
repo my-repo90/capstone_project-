@@ -2,6 +2,11 @@
 <div class="positionning" style="position: absolute;top: 50%;">
     {% block profile %}
         {% if user.is_authenticated %}Hello, {{ user.username }}.{% endif %}
+        {% if user.is_authenticated %}
+        <div class="logout">
+            <a href="login/">Logout</a>
+        </div>
+        {%endif%}
     {% endblock profile %}
 
 </div>
