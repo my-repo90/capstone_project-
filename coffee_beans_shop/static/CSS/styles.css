@@ -57,3 +57,8 @@ body{
 h1{
     box-shadow: 10px 10px 10px rgb(255, 255, 255);
 }
+.positionning{
+    position: absolute;
+    top: 25%;
+}
+

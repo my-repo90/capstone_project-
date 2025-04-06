@@ -1,3 +1,5 @@
+{% load static %}
+<link rel="stylesheet" href={% static "CSS/styles.css" %}>
 
 <div class="positionning" style="position: absolute;top: 50%;">
     {% block profile %}
@@ -8,6 +10,6 @@
         </div>
         {%endif%}
     {% endblock profile %}
-
+        {% for  in  %}{% endfor %}
 </div>
 

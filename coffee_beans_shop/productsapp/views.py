@@ -64,26 +64,32 @@ def pk(request , pk):
         return Response(status.HTTP_204_NO_CONTENT)
     
 
-def no_rest(request):
-    products = [
-        {
-            'name' : "PRODUCT1",
-            'price' : 12365,
-            'stock' : 1500,
+# def no_rest(request):
+#     products = [
+#         {
+#             'name' : "PRODUCT1",
+#             'price' : 12365,
+#             'stock' : 1500,
                     
-        }
-        ,
-        { 
-            'name' : "PRODUCT2",
-            'price' : 88765,
-            'stock' : 22000,
+#         }
+#         ,
+#         { 
+#             'name' : "PRODUCT2",
+#             'price' : 88765,
+#             'stock' : 22000,
                     
-        }
-]
+#         }
+# ]
 
     
-    return JsonResponse(products , safe=False)
+    # return JsonResponse(products , safe=False)
 
 def home(request):
     products = Product.objects.all()
-    return render(request , 'templates/productsapp/products.html' , {'products':products})
+    return render(request , 'home/products.html' , {'product':products})
+
+
+def prodInfos(request,id):
+    product = Product.objects.get(id=id)
+    return render(request , 'home/product_infos.html' , {'product':product})
+

@@ -27,7 +27,7 @@ def register(request):
     else:
         form = UserCreationForm()
     args = {'form': form}
-    return render(request, 'registration/register.html', args)
+    return render(request, 'home/registration/register.html', args)
 
 
 def login(request):
@@ -43,20 +43,17 @@ def login(request):
                 password = password
             )
             login(request, user)
-            return redirect('home/home.html')
+            return redirect('home/profile.html')
     else:
         form = AuthenticationForm()
-    args = {'form': form}
-    return render(request, 'home/home.html')
+        args = {'form': form}
+        return render(request, 'home/registration/login.html', args)
 
 
 def about(request):
     return render(request,'home/aboutus.html')
 
 
-def logout(request):
-    logout(request)
-    return redirect('home')
 
 # def home(request):
 #   products = models.Product.objects.all().values()

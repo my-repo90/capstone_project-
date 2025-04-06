@@ -1,0 +1,41 @@
+{% extends 'home/base.html' %}
+{% load static %}
+<link rel="stylesheet" href={% static "CSS/styles.css" %}>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+
+{% block content %}
+
+
+<tr>
+    <h2>
+        Product Name :
+    </h2>
+    <td>{{ product.name }}</td>
+
+<h2>
+    Product Price :
+</h2>
+    <td>{{ product.price }}</td>
+    
+    <h2>
+        Quantity In Stock :
+    </h2>
+    <td>{{ product.stock }}</td>
+    <br>
+    <hr>
+</tr>
+
+
+{% endblock content %}
+
+    
+</body>
+</html>

@@ -20,14 +20,14 @@
   
     <nav>
 
-        <h1><a href="#">
+        <h1><a href="{% url "home" %}">
                 <h1>Coffee Beans Shop</h1>
             </a></h1>
         <ul>
             <li></li>
-            <li><a href="about/">About Us</a></li>
-            <li><a href="login/">Login</a></li>
-            <li><a href="register/">Create an account</a></li>
+            <li><a href="{% url "about" %}">About Us</a></li>
+            <li><a href="{% url "login" %}">Login</a></li>
+            <li><a href="{% url "register" %}">Create an account</a></li>
             
             <li></li>
         </ul>
