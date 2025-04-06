@@ -7,4 +7,4 @@ week 3 :Start Building
 week 4 :Continue Building
 week 5 :Submission
 
-Used for this Project : Django,Djangorestframework & Bootstrap5
+Used for this Project : Django,Djangorestframework , Bootstrap5 , HTML , Django HTML , CSS & django-crispy-forms
